@@ -24,9 +24,8 @@ body {
 }
 
 .icon-container img {
-  width: 30px;
+  width: 40px;
   padding-left: 9px;
-  padding-top: 5px;
 }
 
 .forecast-description-container {

@@ -65,7 +65,12 @@ $(document).ready(function() {
         $('.location').text('WEATHER FORECAST FOR '+ locationName);
     }
     ).fail(function(data) {
-        console.log('failed -- do nothing');
+        console.log('failed -- do nothing')
+        // since this is a separate call that was done after the first call to the weather api
+        // there is still a chance that the first call will continue to succeed and this one will fail
+        // in the event this fails, we do not want to render anything -- we can prevent any rendering by simply
+        // removing everything from the body
+        $('body').empty();
     });
   }
 
@@ -80,6 +85,11 @@ $(document).ready(function() {
       var date = forecast[i].date.month + '/' + forecast[i].date.day + '/' + forecast[i].date.year;
       var weekday = forecast[i].date.weekday;
       var iconUrl = forecast[i].icon_url;
+      // for this specific exercise, we want to use icon set 7 so we'll need to update the url
+      var iconUrlSet7 = iconUrl.split('/');
+      iconUrlSet7[5] = 'g';
+      iconUrl = iconUrlSet7.join('/');
+      console.log('iconUrl: ', iconUrl);
       var conditions = forecast[i].conditions;
       var high = forecast[i].high.fahrenheit;
       var low = forecast[i].low.fahrenheit;
