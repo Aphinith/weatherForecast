@@ -60,9 +60,9 @@ $(document).ready(function() {
     }).done(function(data) {
         var locationCity = data.location.city;
         var locationState = data.location.state;
-        var locationName = locationCity + ', ' + locationState;
+        var locationName = locationCity.toUpperCase() + ', ' + locationState;
         // insert location name into DOM
-        $('.location').text('Weather forecast for '+ locationName);
+        $('.location').text('WEATHER FORECAST FOR '+ locationName);
     }
     ).fail(function(data) {
         console.log('failed -- do nothing');
