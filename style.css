@@ -1,0 +1,52 @@
+body {
+  font-family: "Helvetica";
+}
+
+.location {
+  height: 37px;
+  visibility: hidden;
+}
+
+.forecast-container {
+  float: left;
+  width: 175px;
+  height: 100px;
+}
+
+.icon-container {
+  float: left;
+  height: 55px;
+  width: 55px;
+}
+
+.icon-container img {
+  width: 30px;
+  padding-left: 9px;
+  padding-top: 5px;
+}
+
+.forecast-description-container {
+  display: inline-block;
+  height: 55px;
+  width: 115px;
+  font-size: 14px;
+}
+
+.forecast-description-container div {
+  margin: 5px 0;
+}
+
+.weekday {
+  color: rgb(245,250,250);
+  background-color: rgb(105,157,188);
+  width: 133px;
+  height: 22px;
+  padding-left: 6px;
+  padding-top: 5px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.template {
+  display: none;
+}
