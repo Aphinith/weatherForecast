@@ -89,7 +89,6 @@ $(document).ready(function() {
       var iconUrlSet7 = iconUrl.split('/');
       iconUrlSet7[5] = 'g';
       iconUrl = iconUrlSet7.join('/');
-      console.log('iconUrl: ', iconUrl);
       var conditions = forecast[i].conditions;
       var high = forecast[i].high.fahrenheit;
       var low = forecast[i].low.fahrenheit;
